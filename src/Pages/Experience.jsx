@@ -30,17 +30,19 @@ const Experience = () => {
       technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'JavaScript', 'TypeScript']
     },
     {
-      id: 2,
-      type: 'leadership',
-      title: 'Technical Lead & Developer',
-      company: 'Tech CivilWar - College Event',
-      period: '2025',
-      location: "SDVS'S BCA College, Sankeshwar",
-      icon: <FaUserTie />,
-      description: 'Led the development of comprehensive digital platforms for college-level coding and quizzes competition.',
-      image: '/images/tech-civilwar.jpg', // Add your image path
-      technologies: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'MySQL', 'Bootstrap']
-    }
+  id: 2,
+  type: 'leadership',
+  title: 'Technical Lead & Developer (Team Project)',
+  company: 'Tech CivilWar - College Event',
+  period: '2025',
+  location: "SDVS'S BCA College, Sankeshwar",
+  icon: <FaUserTie />,
+  description:
+    'Collaborated with a team to develop and manage digital platforms for college-level coding and quiz competitions, contributing to UI development, backend integration, and event technical coordination.',
+  image: '/images/tech-civilwar.jpg',
+  technologies: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'MySQL', 'Bootstrap']
+}
+
   ];
 
   const handleCardClick = (experienceId) => {

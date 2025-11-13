@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const GuestLayout = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
@@ -30,7 +31,6 @@ const GuestLayout = () => {
         style={{
           flex: 1,
           marginTop: isMobile ? "80px" : "60px", // Push content below header
-          paddingBottom: "80px", // Avoid footer overlap
         }}
       >
         <Outlet />
@@ -47,7 +47,7 @@ const GuestLayout = () => {
           zIndex: 99,
         }}
       >
-        {/* <GuestFooter /> */}
+        <Footer/>
       </div>
 
       

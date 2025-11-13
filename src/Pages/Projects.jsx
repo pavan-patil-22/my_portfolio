@@ -1,85 +1,144 @@
 // src/pages/Project.jsx
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaExternalLinkAlt, FaGithub, FaArrowRight, FaCode, FaMobileAlt, FaDesktop } from "react-icons/fa";
-import { SiReact, SiNodedotjs, SiMongodb, SiExpress, SiJavascript, SiCss3, SiPython, SiTensorflow, SiHtml5 } from "react-icons/si";
+import {
+  FaExternalLinkAlt,
+  FaGithub,
+  FaArrowRight,
+  FaCode,
+  FaMobileAlt,
+  FaDesktop,
+} from "react-icons/fa";
+import {
+  SiReact,
+  SiNodedotjs,
+  SiMongodb,
+  SiExpress,
+  SiJavascript,
+  SiCss3,
+  SiPython,
+  SiTensorflow,
+  SiHtml5,
+} from "react-icons/si";
+import LiveProject from "./LiveProject";
 
 const projects = [
- {
-  id: 1,
-  title: "Seek-AI",
-  description: "An AI-based missing person detection and complaint management system with real-time CCTV analysis.",
-  thumbnail: "t-seek-ai.png",
-  technologies: [<SiReact />, <SiNodedotjs />, <SiMongodb />, <SiExpress />, <SiPython />, <SiTensorflow   />],
-  techNames: ["React", "Node.js", "MongoDB", "Express", "Python", "TensorFlow"],
-  liveUrl: "https://seek-ai-demo.vercel.app",
-  githubUrl: "https://github.com/pavanpatil/seek-ai",
-  category: "Full Stack / AI & Security",
-  featured: true
-},
-
   {
-  id: 2,
-  title: "StegoFileShare",
-  description: "A steganography-based secure file sharing system with password protection, wrong-attempt tracking, and admin monitoring.",
-  thumbnail: "t-stegofileshare.png",
-  technologies: [<SiReact />, <SiNodedotjs />, <SiExpress />, <SiMongodb />, <SiHtml5/>,<SiCss3/>],
-  techNames: ["React", "Node.js", "Express", "MongoDB",  ],
-  liveUrl: "https://stegofileshare-demo.vercel.app",
-  githubUrl: "https://github.com/pavanpatil/stegofileshare",
-  category: "Full Stack / Security",
-  featured: true
-},
-
+    id: 1,
+    title: "Seek-AI",
+    description:
+      "An AI-based missing person detection and complaint management system with real-time CCTV analysis.",
+    thumbnail: "t-seek-ai.png",
+    technologies: [
+      <SiReact />,
+      <SiNodedotjs />,
+      <SiMongodb />,
+      <SiExpress />,
+      <SiPython />,
+      <SiTensorflow />,
+    ],
+    techNames: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Python",
+      "TensorFlow",
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/pavanpatil/seek-ai",
+    category: "Full Stack / AI & Security",
+    featured: true,
+  },
   {
-  id: 3,
-  title: "HeartScan AI",
-  description: "An AI-powered cardiovascular risk assessment system that analyzes retinal images to predict heart health and offers doctor appointment scheduling.",
-  thumbnail: "t-HeartScan AI.png",
-  technologies: [<SiReact />, <SiNodedotjs />, <SiExpress />, <SiMongodb />, <SiPython />, <SiTensorflow />],
-  techNames: ["React", "Node.js", "Express", "MongoDB", "Python", "TensorFlow"],
-  liveUrl: "https://heartscanai-demo.vercel.app",
-  githubUrl: "https://github.com/pavanpatil/heartscanai",
-  category: "Full Stack / AI & HealthTech",
-  featured: true
-},
+    id: 2,
+    title: "Ligand Software Solutions – Official Website",
+    description:
+      "A fully responsive and modern corporate website built for Ligand Software Solutions, featuring service pages, project showcases, contact modules, and optimized performance for a professional client-facing experience.",
+    thumbnail: "ligand.jpg",
+    technologies: [<SiReact />, <SiNodedotjs />, <SiMongodb />],
+    techNames: ["React", "Node.js", "MongoDB"],
+    liveUrl: "https://ligandsoftware.com",
+    githubUrl: "https://github.com/pavanpatil/ligand-website", // optional
+    category: "Full Stack",
+    featured: true,
+  },
 
   {
     id: 4,
-    title: "Task Management App",
-    description: "Collaborative task management application with real-time updates and team collaboration features.",
-    thumbnail: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-    technologies: [<SiReact />, <SiExpress />, <SiMongodb />],
-    techNames: ["React", "Express", "MongoDB"],
-    liveUrl: "https://taskmanager-demo.com",
-    githubUrl: "https://github.com/pavanpatil/task-manager",
-    category: "Full Stack",
-    featured: false
+    title: "StegoFileShare",
+    description:
+      "A steganography-based secure file sharing system with password protection, wrong-attempt tracking, and admin monitoring.",
+    thumbnail: "t-stegofileshare.png",
+    technologies: [
+      <SiReact />,
+      <SiNodedotjs />,
+      <SiExpress />,
+      <SiMongodb />,
+      <SiHtml5 />,
+      <SiCss3 />,
+    ],
+    techNames: ["React", "Node.js", "Express", "MongoDB"],
+    liveUrl: "",
+    githubUrl: "https://github.com/pavanpatil/stegofileshare",
+    category: "Full Stack / Security",
+    featured: true,
   },
+
+  {
+    id: 3,
+    title: "HeartScan AI",
+    description:
+      "An AI-powered cardiovascular risk assessment system that analyzes retinal images to predict heart health and offers doctor appointment scheduling.",
+    thumbnail: "t-HeartScan AI.png",
+    technologies: [
+      <SiReact />,
+      <SiNodedotjs />,
+      <SiExpress />,
+      <SiMongodb />,
+      <SiPython />,
+      <SiTensorflow />,
+    ],
+    techNames: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Python",
+      "TensorFlow",
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/pavanpatil/heartscanai",
+    category: "Full Stack / AI & HealthTech",
+    featured: true,
+  },
+
   {
     id: 5,
-    title: "Weather Dashboard",
-    description: "Real-time weather forecasting application with interactive maps and location-based services.",
-    thumbnail: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop",
-    technologies: [<SiReact />, <SiJavascript />],
-    techNames: ["React", "JavaScript"],
-    liveUrl: "https://weather-demo.com",
-    githubUrl: "https://github.com/pavanpatil/weather-app",
+    title: "Gururaj Foundation – NGO Website",
+    description:
+      "Built a clean and responsive website for a local NGO to showcase missions, activities, donation details, and community programs with accessible navigation and well-structured content.",
+    thumbnail: "gururaj.jpg",
+    technologies: [<SiHtml5 />, <SiCss3 />, <SiJavascript />],
+    techNames: ["HTML", "CSS", "JavaScript"],
+    liveUrl: "https://gururajfoundation.com", // replace if needed
+    githubUrl: "https://github.com/pavanpatil/gururaj-foundation", // optional
     category: "Frontend",
-    featured: false
+    featured: false,
   },
   {
-    id: 6,
-    title: "Social Media Platform",
-    description: "Social networking platform with posts, comments, likes, and real-time messaging features.",
-    thumbnail: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=500&h=300&fit=crop",
+    id: 7,
+    title: "Ligand WorkSpace  (Ongoing)",
+    description:
+      "Designed and developed an advanced Learning Management System using the MERN stack as part of a 4-member team. Includes features such as attendance tracking, homework evaluation, fee management, project grouping, and secure admin-controlled access for students and teachers.",
+    thumbnail: "workspace.jpg",
     technologies: [<SiReact />, <SiNodedotjs />, <SiMongodb />, <SiExpress />],
     techNames: ["React", "Node.js", "MongoDB", "Express"],
-    liveUrl: "https://social-demo.com",
-    githubUrl: "https://github.com/pavanpatil/social-app",
+    liveUrl: "https://liganddevelopers.vercel.app/", // replace if not deployed
+    githubUrl: "https://github.com/pavanpatil/ligand-workspace", // optional
     category: "Full Stack",
-    featured: true
-  }
+    featured: true,
+  },
 ];
 
 const Project = () => {
@@ -93,27 +152,26 @@ const Project = () => {
             My <span className="highlight">Projects</span>
           </h1>
           <p className="projects-subtitle">
-           Here are some of my recent works that showcase my skills in full-stack development, responsive design, and modern web technologies.
+            Here are some of my recent works that showcase my skills in
+            full-stack development, responsive design, and modern web
+            technologies.
           </p>
-          
         </div>
       </section>
 
       {/* Projects Grid */}
       <section className="projects-section">
         <div className="projects-container">
-          
-
           <div className="projects-grid">
             {projects.map((project, idx) => (
-              <div 
-                key={project.id} 
-                className={`project-card ${project.featured ? '' : ''} ${idx >= 2 ? 'mobile-hidden' : ''}`}
+              <div
+                key={project.id}
+                className={`project-card ${project.featured ? "" : ""} ${
+                  idx >= 2 ? "mobile-hidden" : ""
+                }`}
                 data-aos="fade-up"
                 data-aos-delay={project.id * 100}
               >
-                
-
                 {/* Project Thumbnail */}
                 <div className="project-image-container">
                   <img
@@ -122,9 +180,7 @@ const Project = () => {
                     className="project-thumbnail"
                   />
                   <div className="project-overlay">
-                    <div className="project-links">
-                      
-                    </div>
+                    <div className="project-links"></div>
                   </div>
                   {/* <div className="project-category">
                     {project.category}
@@ -135,7 +191,7 @@ const Project = () => {
                 <div className="project-content">
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-description">{project.description}</p>
-                  
+
                   {/* Technologies
                   <div className="project-technologies">
                     <div className="tech-icons">
@@ -148,14 +204,25 @@ const Project = () => {
                     <span className="tech-count">{project.technologies.length} techs</span>
                   </div> */}
 
-                  {/* Action Buttons */}
+                  {/* Action Buttons - Show Live Link if available, else View Details */}
                   <div className="project-actions">
-                    <Link 
-                      to={`/projects/${project.id}`}
-                      className="project-details-btn"
-                    >
-                      View Details <FaArrowRight />
-                    </Link>
+                    {project.liveUrl ? (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-details-btn"
+                      >
+                        Live Link <FaExternalLinkAlt />
+                      </a>
+                    ) : (
+                      <Link
+                        to={`/projects/${project.id}`}
+                        className="project-details-btn"
+                      >
+                        View Details <FaArrowRight />
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
@@ -167,8 +234,12 @@ const Project = () => {
               className="mobile_projects_view_btn"
               onClick={() => {
                 const root = document.documentElement;
-                const expanded = root.getAttribute('data-projects-expanded') === 'true';
-                root.setAttribute('data-projects-expanded', (!expanded).toString());
+                const expanded =
+                  root.getAttribute("data-projects-expanded") === "true";
+                root.setAttribute(
+                  "data-projects-expanded",
+                  (!expanded).toString()
+                );
               }}
               aria-expanded={false}
             >
@@ -183,7 +254,7 @@ const Project = () => {
         <div className="cta-content">
           <h2>Have a project in mind?</h2>
           <p>Let's work together to bring your ideas to life</p>
-          <button className="cta-button" onClick={() => navigate('/contact')}>
+          <button className="cta-button" onClick={() => navigate("/contact")}>
             Get In Touch <FaArrowRight />
           </button>
         </div>

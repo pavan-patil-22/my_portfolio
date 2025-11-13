@@ -77,10 +77,23 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        {/* Logo */}
+        {/* Logo with Profile Picture */}
         <div className="nav-logo">
-          <span className="logo-text">Pavan Patil</span>
-          <span className="logo-badge">MERN Stack</span>
+          {/* Profile Picture */}
+          <div className="profile-pic-container">
+            <img 
+              src="/pavan.jpg" 
+              alt="Pavan Patil"
+              className="profile-pic"
+              onError={(e) => {
+                e.target.style.display = 'none';
+              }}
+            />
+          </div>
+          <div className="logo-content">
+            <span className="logo-text">Pavan Patil</span>
+            {/* <span className="logo-badge">MERN Stack</span> */}
+          </div>
         </div>
 
         {/* Navigation Items */}
@@ -149,6 +162,34 @@ const Navbar = () => {
             display: flex;
             align-items: center;
             gap: 0.8rem;
+          }
+
+          .logo-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+          }
+
+          /* Profile Picture Styles */
+          .profile-pic-container {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid transparent;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .profile-pic {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(10, 10, 10, 0.95);
           }
 
           .logo-text {
@@ -327,13 +368,22 @@ const Navbar = () => {
               font-size: 0.6rem;
               padding: 0.15rem 0.5rem;
             }
+
+            .profile-pic-container {
+              width: 45px;
+              height: 45px;
+            }
           }
 
           @media screen and (max-width: 480px) {
             .nav-logo {
-              flex-direction: column;
-              gap: 0.3rem;
-              align-items: flex-start;
+              flex-direction: row;
+              gap: 0.5rem;
+              align-items: center;
+            }
+
+            .logo-content {
+              gap: 0.1rem;
             }
 
             .logo-text {
@@ -342,6 +392,11 @@ const Navbar = () => {
 
             .logo-badge {
               font-size: 0.55rem;
+            }
+
+            .profile-pic-container {
+              width: 40px;
+              height: 40px;
             }
           }
 

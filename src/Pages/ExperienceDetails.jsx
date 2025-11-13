@@ -97,21 +97,29 @@ const ExperienceDetails = () => {
     2: {
       id: 2,
       type: "leadership",
-      title: "Technical Lead & Developer",
+      title: "Technical Lead & Developer (Team Project)",
       company: "Tech CivilWar - College Event",
       period: "2023",
       location: "SDVS'S BCA College, Sankeshwar",
       icon: <FaUserTie />,
       description:
-        "Led the development of comprehensive digital platforms for college-level coding and quizzes competition for BCA 1st and 2nd year students.",
+        "Collaborated as part of the Logic Legends team to design and develop comprehensive digital platforms for college-level coding and quiz competitions for BCA 1st and 2nd year students.",
+
+      team: "Logic Legends",
+
+      appreciation:
+        "🤝 This success belongs to Logic Legends — a team powered by creativity, dedication, and passion. 💪 Thank you to our BCA faculty for trusting us and giving us full responsibility for the event. Your support made this achievement possible.",
+
       image: "/images/tech-civilwar.jpg",
+
       responsibilities: [
-        "Led technical development and web design for the entire event",
+        "Worked as a team under Logic Legends to lead technical development and web design",
         "Developed event registration and information portal websites",
-        "Created dedicated platforms for coding competitions and technical events",
-        "Managed complete digital infrastructure for a paperless event",
+        "Built dedicated platforms for coding competitions and technical events",
+        "Managed complete digital infrastructure enabling a fully paperless event",
         "Coordinated with quiz teams for pre-developed software integration",
       ],
+
       technologies: [
         "HTML5",
         "CSS3",
@@ -120,16 +128,17 @@ const ExperienceDetails = () => {
         "Git",
         "React.js",
         "Node.js",
-        "Mongo.db",
+        "MongoDB",
       ],
+
       achievements: [
-        "Successfully organized the first fully digital college event in department history",
-        "Took leadership in planning and developing the entire coding event platform at the college level",
+        "Successfully contributed to the first fully digital college event in department history",
+        "Played a key role in planning and developing the entire coding event platform at the college level",
         "Handled technical development, event website, and digital registration system",
         "60+ participants across multiple coding and quiz competitions",
-        "Zero paper usage throughout the entire competition, promoting an eco-friendly event",
-        "Implemented real-time result processing and live score display (used internally for event management)",
-        "Collected feedback from participants  after completion to identify areas for improvement and future enhancement",
+        "Achieved zero paper usage throughout the event, promoting an eco-friendly approach",
+        "Enabled real-time result processing and live score display for internal event management",
+        "Collected participant feedback to improve future events and platform features",
       ],
 
       eventPlatforms: [
@@ -143,9 +152,18 @@ const ExperienceDetails = () => {
           description: "Online registration system with participant management",
         },
       ],
+
       links: [
-        { icon: <FaGlobe />, url: "https://pavan-patil22.github.io/Bit-Battle/", label: "Event Wwebsite" },
-        { icon: <FaGlobe />, url: "https://logic-legends2k25.github.io/Bit-Battle-R2/", label: "Event Website" },
+        {
+          icon: <FaGlobe />,
+          url: "https://pavan-patil22.github.io/Bit-Battle/",
+          label: "Event Website",
+        },
+        {
+          icon: <FaGlobe />,
+          url: "https://logic-legends2k25.github.io/Bit-Battle-R2/",
+          label: "Event Website",
+        },
       ],
     },
   };

@@ -27,6 +27,9 @@ import {
   SiHtml5,
   SiTypescript,
 } from "react-icons/si";
+import { DiJava } from "react-icons/di";
+import { SiC,  SiFlask } from "react-icons/si";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -46,11 +49,13 @@ const Skills = () => {
     { name: "Node.js", level: 80, icon: <SiNodedotjs />, color: "#339933" },
     { name: "MongoDB", level: 75, icon: <SiMongodb />, color: "#47A248" },
     { name: "Express.js", level: 78, icon: <SiExpress />, color: "#000000" },
-    { name: "TypeScript", level: 70, icon: <SiTypescript />, color: "#3178C6" },
     { name: "Python", level: 65, icon: <SiPython />, color: "#3776AB" },
     { name: "Git", level: 82, icon: <SiGit />, color: "#F05032" },
     { name: "HTML5", level: 95, icon: <SiHtml5 />, color: "#E34F26" },
     { name: "CSS3", level: 88, icon: <SiCss3 />, color: "#1572B6" },
+    { name: "C Programming", level: 90, icon: <SiC />, color: "#3178C6" },
+  { name: "Java", level: 50, icon: <DiJava />, color: "#007396" },
+  { name: "Flask", level: 70, icon: <SiPython />, color: "#339933" },
   ];
 
   const hobbies = [
