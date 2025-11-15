@@ -58,4 +58,17 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    document.addEventListener("copy", function (event) {
+    // Prevent default copy behavior
+    event.preventDefault();
+
+    // Set custom text to clipboard
+    event.clipboardData.setData(
+      "text/plain",
+      "😎 Nice try bro, but I am also a developer! Don't copy my text!"
+    );
+
+  });
+  </script>
 </html>

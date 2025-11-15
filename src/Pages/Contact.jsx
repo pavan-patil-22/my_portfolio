@@ -90,11 +90,11 @@ const Contact = () => {
     {
       icon: <FaEnvelope className="text-xl" />,
       title: "Email",
-      value: "pavan@example.com",
+      value: "pavanpatil2204@gmail.com",
       description: "Drop me a line! 📧",
       color: "hover:bg-blue-600 border-blue-500",
       bgColor: "bg-blue-500",
-      url: "mailto:pavan@example.com",
+      url: "mailto:pavanpatil2204@gmail.com",
       animation: "fade-up"
     },
     {
@@ -110,11 +110,11 @@ const Contact = () => {
     {
       icon: <FaMapMarkerAlt className="text-xl" />,
       title: "Location",
-      value: "Mumbai, India",
+      value: "Hargapur,Belagavi India",
       description: "Remote work ready! 🌍",
       color: "hover:bg-red-600 border-red-500",
       bgColor: "bg-red-500",
-      url: "#",
+      url: "https://maps.app.goo.gl/WEtwUoSRjq7sNnFn8",
       animation: "fade-up"
     }
   ];
@@ -287,7 +287,7 @@ const Contact = () => {
                   type="submit"
                   disabled={isSubmitting || !message.trim()}
                   className={`submit-btn ${isSubmitting ? 'submitting' : ''} ${!message.trim() ? 'disabled' : ''}`}
-                  data-aos="zoom-in"
+                  // data-aos="fade-in"
                   data-aos-delay="700"
                 >
                   {isSubmitting ? (
@@ -298,7 +298,7 @@ const Contact = () => {
                   ) : (
                     <>
                       <FaRocket className="btn-icon" />
-                      Blast Off to WhatsApp!
+                      Redirecting to WhatsApp…
                     </>
                   )}
                 </button>
@@ -342,7 +342,7 @@ const Contact = () => {
           color: #fff;
           min-height: 100vh;
           font-family: 'Inter', sans-serif;
-          padding: 2rem 1rem;
+          padding: 80px 1rem;
           position: relative;
           overflow: hidden;
         }

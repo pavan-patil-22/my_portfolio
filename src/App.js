@@ -13,38 +13,38 @@ import { useEffect } from "react";
 import { toast } from "react-toastify";
 
 function App() {
-  useEffect(() => {
-    // Disable right-click
-    const handleContextMenu = (e) => {
-      e.preventDefault();
-      toast.error("👎 Developers say NO! Right-click blocked!", {
-        position: "top-right",
-      });
-    };
-    document.addEventListener("contextmenu", handleContextMenu);
+  // useEffect(() => {
+  //   // Disable right-click
+  //   const handleContextMenu = (e) => {
+  //     e.preventDefault();
+  //     toast.error("👎 Developers say NO! Right-click blocked!", {
+  //       position: "top-right",
+  //     });
+  //   };
+  //   document.addEventListener("contextmenu", handleContextMenu);
 
-    // Disable F12, Ctrl+Shift+I/J/C, Ctrl+U
-    const handleKeyDown = (event) => {
-      if (
-        event.key === "F12" ||
-        (event.ctrlKey &&
-          event.shiftKey &&
-          (event.key === "I" || event.key === "J" || event.key === "C")) ||
-        (event.ctrlKey && event.key === "U")
-      ) {
-        event.preventDefault();
-        toast.error("😎 Nice try bro, but I’m also a developer!", {
-          position: "top-right",
-        });
-      }
-    };
-    document.addEventListener("keydown", handleKeyDown);
+  //   // Disable F12, Ctrl+Shift+I/J/C, Ctrl+U
+  //   const handleKeyDown = (event) => {
+  //     if (
+  //       event.key === "F12" ||
+  //       (event.ctrlKey &&
+  //         event.shiftKey &&
+  //         (event.key === "I" || event.key === "J" || event.key === "C")) ||
+  //       (event.ctrlKey && event.key === "U")
+  //     ) {
+  //       event.preventDefault();
+  //       toast.error("😎 Nice try bro, but I’m also a developer!", {
+  //         position: "top-right",
+  //       });
+  //     }
+  //   };
+  //   document.addEventListener("keydown", handleKeyDown);
 
-    return () => {
-      document.removeEventListener("contextmenu", handleContextMenu);
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener("contextmenu", handleContextMenu);
+  //     document.removeEventListener("keydown", handleKeyDown);
+  //   };
+  // }, []);
   return (
     <div className="App">
       <Routes>

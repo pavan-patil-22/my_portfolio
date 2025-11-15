@@ -233,7 +233,7 @@ const ExperienceDetails = () => {
           </h3>
           <ul className="responsibilities_list">
             {experience.responsibilities.map((item, idx) => (
-              <li key={idx} data-aos="fade-right" data-aos-delay={idx * 100}>
+              <li key={idx} data-aos="fade-down" data-aos-delay={idx * 100}>
                 {item}
               </li>
             ))}
@@ -272,7 +272,7 @@ const ExperienceDetails = () => {
                 <div
                   key={idx}
                   className="achievement_item"
-                  data-aos="fade-left"
+                  data-aos="fade-up"
                   data-aos-delay={idx * 100}
                 >
                   <FaTrophy className="achievement_icon" />
