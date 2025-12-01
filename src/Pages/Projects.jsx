@@ -65,11 +65,11 @@ const projects = [
   },
 
   {
-    id: 4,
+    id: 2,
     title: "StegoFileShare",
     description:
       "A steganography-based secure file sharing system with password protection, wrong-attempt tracking, and admin monitoring.",
-    thumbnail: "t-stegofileshare.png",
+    thumbnail: "Stegofileshare.png",
     technologies: [
       <SiReact />,
       <SiNodedotjs />,

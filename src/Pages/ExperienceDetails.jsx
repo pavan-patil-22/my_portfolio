@@ -90,8 +90,7 @@ const ExperienceDetails = () => {
         },
       ],
       links: [
-        { icon: <FaExternalLinkAlt />, url: "#", label: "Company Website" },
-        { icon: <FaGithub />, url: "#", label: "Project Repository" },
+        { icon: <FaExternalLinkAlt />, url: "https://ligandsoftware.com/", label: "Company Website" },
       ],
     },
     2: {
