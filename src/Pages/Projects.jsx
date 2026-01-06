@@ -63,13 +63,25 @@ const projects = [
     category: "Full Stack",
     featured: true,
   },
+  {
+    id: 2,
+    title: "SDVS'S BCA– Official Website",
+    description:"Developed the official website for SDVS’s BCA College, Sankeshwar, providing a responsive, user-friendly platform to showcase academic programs, admissions, and institutional information with a clean and professional design.",
+    thumbnail: "sdvsbca.png",
+    technologies: [<SiReact />, <SiNodedotjs />, <SiMongodb />],
+    techNames: ["React", "Node.js", "MongoDB"],
+    liveUrl: "https://sdvssbcasnk.com",
+    githubUrl: "https://github.com/pavanpatil/ligand-website", // optional
+    category: "Full Stack",
+    featured: true,
+  },
 
   {
     id: 2,
     title: "StegoFileShare",
     description:
       "A steganography-based secure file sharing system with password protection, wrong-attempt tracking, and admin monitoring.",
-    thumbnail: "Stegofileshare.png",
+    thumbnail: "StegoFileShare.png",
     technologies: [
       <SiReact />,
       <SiNodedotjs />,
