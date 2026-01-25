@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Chatbot from "../Pages/Chatbot";
 
 const GuestLayout = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
@@ -50,7 +51,7 @@ const GuestLayout = () => {
         <Footer/>
       </div>
 
-      
+      <Chatbot/>
     </div>
   );
 };
