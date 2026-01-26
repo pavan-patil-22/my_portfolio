@@ -46,14 +46,11 @@ The website includes a **custom AI chatbot** designed to:
 - JavaScript (ES6+)
 - HTML5 & CSS3
 
-### Backend / AI
-- Groq API (LLM-based chatbot)
-- Prompt-engineered system context
 
 ### Tools & Deployment
 - Node.js & npm
 - Git & GitHub
-- Vercel (Deployment)
+- Vercel 
 
 ---
 
