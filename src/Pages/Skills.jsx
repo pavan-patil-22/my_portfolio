@@ -113,7 +113,7 @@ const Skills = () => {
     {
       name: "Web Development",
       emoji: "⛓️",
-      description: "MERN and Flask Technologi",
+      description: "MERN and Flask Technology",
     },
     {
       name: "AI & ML",
