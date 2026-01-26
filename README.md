@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# 🌐 Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive personal portfolio website showcasing my **skills, projects, experience, and achievements**, along with an **AI-powered personal chatbot** for interactive profile queries.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 👤 About Me
 
-### `npm start`
+I am **Pavan Patil**, currently pursuing a **Master of Computer Applications (MCA)**.  
+I specialize in **Full Stack Web Development** and **AI-based applications**, with hands-on experience in building real-world MERN stack and AI-driven projects.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This portfolio serves as a **central professional profile** for recruiters, collaborators, and academic purposes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ✨ Key Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 🧑‍💻 Professional personal profile
+- 📁 Detailed project showcase
+- 🤖 AI-powered personal chatbot (Groq API)
+- 📱 Fully responsive design
+- 🎨 Clean and modern UI
+- ⚡ Fast performance and optimized build
+- 🌍 Deployed on Vercel
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🤖 AI Personal Chatbot
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The website includes a **custom AI chatbot** designed to:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Answer **only questions related to me**
+- Provide details about **education, skills, projects, and experience**
+- Refuse unrelated queries politely
+- Never expose private project repositories
+- Clearly identify itself as *my personal chatbot*
 
-### `npm run eject`
+> ⚠️ The chatbot is designed for **portfolio and demonstration purposes** only.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Frontend
+- React.js
+- JavaScript (ES6+)
+- HTML5 & CSS3
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Backend / AI
+- Groq API (LLM-based chatbot)
+- Prompt-engineered system context
 
-## Learn More
+### Tools & Deployment
+- Node.js & npm
+- Git & GitHub
+- Vercel (Deployment)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📂 Project Highlights
 
-### Code Splitting
+- **Seek_AI** – AI-based missing person detection & complaint management platform  
+- **HeartScan_AI** – AI-powered heart attack risk prediction system  
+- **StegoFileShare** – Secure file sharing using steganography  
+- **Corporate & NGO Websites** – Live MERN stack projects  
+- **Learning Management System** – In-progress enterprise-level application  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> ℹ️ Detailed project explanations are available via the chatbot.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 Getting Started (Local Setup)
+```
+# Clone the repository
+git clone https://github.com/pavan-patil-22/my_portfolio/
 
-### Making a Progressive Web App
+# Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Start development server
+npm start
