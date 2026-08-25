@@ -1,4 +1,3 @@
-// src/pages/Contact.jsx
 import React, { useState, useEffect } from "react";
 import { FaWhatsapp, FaPaperPlane, FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaEnvelope, FaMapMarkerAlt, FaPhone, FaRocket, FaSmile, FaHeart } from "react-icons/fa";
 import { SiLeetcode, SiCodechef } from "react-icons/si";
@@ -6,6 +5,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+// ⚠️ Replace this import path with your actual image location
+
 
 const Contact = () => {
   const [message, setMessage] = useState("");
@@ -21,7 +23,6 @@ const Contact = () => {
       mirror: false
     });
 
-    // Check if mobile
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
@@ -48,7 +49,6 @@ const Contact = () => {
 
     setIsSubmitting(true);
 
-    // Creative WhatsApp message templates
     const messageTemplates = [
       `Hello Pavan! 👋\n\n${message}\n\nLooking forward to your response! 🚀`,
       `Hey Pavan! ✨\n\n${message}\n\nLet's create something amazing together! 💫`,
@@ -59,7 +59,6 @@ const Contact = () => {
     const whatsappMessage = encodeURIComponent(randomTemplate);
     const whatsappUrl = `https://wa.me/9110413455?text=${whatsappMessage}`;
 
-    // Show success toast with fun emoji
     toast.success("🚀 Opening WhatsApp... Get ready to connect!", {
       position: "top-right",
       autoClose: 2000,
@@ -68,7 +67,6 @@ const Contact = () => {
       pauseOnHover: true,
     });
 
-    // Open WhatsApp after a short delay
     setTimeout(() => {
       window.open(whatsappUrl, '_blank');
       setMessage("");
@@ -110,7 +108,7 @@ const Contact = () => {
     {
       icon: <FaMapMarkerAlt className="text-xl" />,
       title: "Location",
-      value: "Hargapur,Belagavi India",
+      value: "Hargapur, Belagavi India",
       description: "Remote work ready! 🌍",
       color: "hover:bg-red-600 border-red-500",
       bgColor: "bg-red-500",
@@ -215,7 +213,6 @@ const Contact = () => {
               </div>
               <h1 className="profile-name">Pavan Patil</h1>
               <p className="profile-title">MERN Stack Developer</p>
-              
             </div>
 
             {/* Contact Information Cards */}
@@ -246,8 +243,7 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-
-                      </div>
+          </div>
 
           {/* Right Section - Message Form */}
           <div className="right-section">
@@ -257,10 +253,7 @@ const Contact = () => {
                   <FaWhatsapp />
                 </div>
                 <h2 className="form-title">Let's Chat on WhatsApp! 💬</h2>
-               
               </div>
-
-              
 
               <form onSubmit={handleSubmit} className="message-form">
                 <div className="form-group" data-aos="fade-up" data-aos-delay="600">
@@ -287,7 +280,6 @@ const Contact = () => {
                   type="submit"
                   disabled={isSubmitting || !message.trim()}
                   className={`submit-btn ${isSubmitting ? 'submitting' : ''} ${!message.trim() ? 'disabled' : ''}`}
-                  // data-aos="fade-in"
                   data-aos-delay="700"
                 >
                   {isSubmitting ? (
@@ -310,8 +302,6 @@ const Contact = () => {
               </form>
             </div>
           </div>
-
-          
         </div>
       </section>
 
@@ -328,7 +318,7 @@ const Contact = () => {
               <FaWhatsapp />
               Start Chatting Now
             </a>
-            <a href="mailto:pavan@example.com" className="cta-btn secondary">
+            <a href="mailto:pavanpatil2204@gmail.com" className="cta-btn secondary">
               <FaEnvelope />
               Send Email
             </a>
@@ -336,13 +326,15 @@ const Contact = () => {
         </div>
       </section>
 
+      
+
       <style jsx>{`
         .contact-page {
           background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #0f172a 100%);
           color: #fff;
           min-height: 100vh;
           font-family: 'Inter', sans-serif;
-          padding: 80px 1rem;
+          padding: 80px 1rem 0 1rem;
           position: relative;
           overflow: hidden;
         }
@@ -473,24 +465,6 @@ const Contact = () => {
           font-weight: 600;
         }
 
-        .profile-description {
-          font-size: 1.1rem;
-          color: #94a3b8;
-          line-height: 1.6;
-          max-width: 400px;
-          margin: 0 auto;
-        }
-
-        .heart-beat {
-          color: #ef4444;
-          animation: heartbeat 1.5s ease-in-out infinite;
-        }
-
-        @keyframes heartbeat {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.1); }
-        }
-
         /* Section Titles */
         .section-title {
           font-size: 1.8rem;
@@ -592,66 +566,6 @@ const Contact = () => {
           margin: 0;
         }
 
-        /* Social Media Section */
-        .social-section {
-          margin-bottom: 2rem;
-        }
-
-        .social-section.mobile-social {
-          margin-top: 3rem;
-          grid-column: 1 / -1;
-        }
-
-        .social-grid {
-          display: grid;
-          grid-template-columns: repeat(6, 1fr);
-          gap: 1rem;
-        }
-
-        .social-card {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          gap: 0.8rem;
-          padding: 1.2rem 0.5rem;
-          background: rgba(255, 255, 255, 0.03);
-          border-radius: 15px;
-          border: 1px solid;
-          text-decoration: none;
-          color: #e2e8f0;
-          transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          backdrop-filter: blur(10px);
-          min-height: 100px;
-        }
-
-        .social-card:hover {
-          transform: translateY(-5px) scale(1.05);
-          background: rgba(255, 255, 255, 0.08);
-        }
-
-        .social-icon {
-          width: 40px;
-          height: 40px;
-          border-radius: 10px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: white;
-          font-size: 1rem;
-          transition: transform 0.3s ease;
-        }
-
-        .social-card:hover .social-icon {
-          transform: scale(1.2) rotate(10deg);
-        }
-
-        .social-name {
-          font-weight: 600;
-          font-size: 0.75rem;
-          line-height: 1.2;
-        }
-
         /* Form Section */
         .right-section {
           position: relative;
@@ -697,50 +611,6 @@ const Contact = () => {
           font-weight: 800;
         }
 
-        .form-subtitle {
-          color: #94a3b8;
-          font-size: 1rem;
-          line-height: 1.5;
-        }
-
-        /* Suggestions Section */
-        .suggestions-section {
-          margin-bottom: 2rem;
-        }
-
-        .suggestions-title {
-          font-size: 1.1rem;
-          color: #e2e8f0;
-          margin-bottom: 1rem;
-          font-weight: 600;
-        }
-
-        .suggestions-grid {
-          display: flex;
-          flex-direction: column;
-          gap: 0.8rem;
-        }
-
-        .suggestion-btn {
-          padding: 1rem 1.2rem;
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          border-radius: 12px;
-          color: #cbd5e1;
-          font-size: 0.85rem;
-          text-align: left;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          line-height: 1.4;
-        }
-
-        .suggestion-btn:hover {
-          background: rgba(255, 255, 255, 0.1);
-          border-color: #667eea;
-          transform: translateX(5px);
-        }
-
-        /* Message Form */
         .message-form {
           display: flex;
           flex-direction: column;
@@ -882,6 +752,7 @@ const Contact = () => {
           border-radius: 30px;
           position: relative;
           overflow: hidden;
+          z-index: 1;
         }
 
         .cta-content {
@@ -944,30 +815,53 @@ const Contact = () => {
           box-shadow: 0 20px 40px rgba(102, 126, 234, 0.6);
         }
 
+        /* ===== HERO BANNER IMAGE SECTION ===== */
+        .hero-banner-section {
+          width: calc(100% + 2rem);
+          margin-left: -1rem;
+          margin-right: -1rem;
+          margin-top: 4rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .hero-banner-wrapper {
+          width: 100%;
+          hight: 90vh;
+          position: relative;
+          overflow: hidden;
+          line-height: 0;
+        }
+
+        .hero-banner-img {
+          width: 100%;
+          height: auto;
+          display: block;
+          object-fit: cover;
+          object-position: center center;
+          transition: transform 0.8s ease;
+        }
+
+        .hero-banner-wrapper:hover .hero-banner-img {
+          transform: scale(1.02);
+        }
+
+        /* Gradient overlay — smooth fade into page bg at top */
+        .hero-banner-gradient {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 180px;
+          background: linear-gradient(to bottom, #0c0c0c 0%, transparent 100%);
+          pointer-events: none;
+        }
+
         /* Mobile Responsive */
         @media (max-width: 1024px) {
           .content-grid {
             grid-template-columns: 1fr;
             gap: 3rem;
-          }
-
-          .social-grid {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-          }
-
-          .social-card {
-            padding: 1.2rem 0.8rem;
-            min-height: 100px;
-          }
-
-          .social-icon {
-            width: 40px;
-            height: 40px;
-          }
-
-          .social-name {
-            font-size: 0.8rem;
           }
 
           .form-container {
@@ -977,7 +871,7 @@ const Contact = () => {
 
         @media (max-width: 768px) {
           .contact-page {
-            padding: 1rem;
+            padding: 1rem 1rem 0 1rem;
           }
 
           .profile-name {
@@ -1015,25 +909,6 @@ const Contact = () => {
             font-size: 0.8rem;
           }
 
-          .social-grid {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.8rem;
-          }
-
-          .social-card {
-            padding: 1rem 0.5rem;
-            min-height: 90px;
-          }
-
-          .social-icon {
-            width: 35px;
-            height: 35px;
-          }
-
-          .social-name {
-            font-size: 0.75rem;
-          }
-
           .form-container {
             padding: 2rem;
           }
@@ -1057,10 +932,13 @@ const Contact = () => {
             justify-content: center;
           }
 
-          /* Mobile specific social section */
-          .social-section.mobile-social {
-            order: 3;
+          .hero-banner-section {
             margin-top: 2rem;
+            width: calc(100% + 2rem);
+          }
+
+          .hero-banner-gradient {
+            height: 100px;
           }
         }
 
@@ -1068,11 +946,6 @@ const Contact = () => {
           .contact-info-grid {
             grid-template-columns: 1fr 1fr;
             gap: 0.8rem;
-          }
-
-          .social-grid {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.6rem;
           }
 
           .profile-header {
@@ -1110,27 +983,12 @@ const Contact = () => {
             height: 45px;
           }
 
-          .social-card {
-            min-height: 85px;
-            padding: 0.8rem 0.4rem;
+          .hero-banner-section {
+            margin-top: 1.5rem;
           }
 
-          .social-icon {
-            width: 32px;
-            height: 32px;
-          }
-
-          .social-name {
-            font-size: 0.7rem;
-          }
-
-          .suggestions-grid {
-            gap: 0.6rem;
-          }
-
-          .suggestion-btn {
-            padding: 0.8rem 1rem;
-            font-size: 0.8rem;
+          .hero-banner-gradient {
+            height: 60px;
           }
         }
 
@@ -1140,11 +998,6 @@ const Contact = () => {
             gap: 0.6rem;
           }
 
-          .social-grid {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.5rem;
-          }
-
           .contact-card {
             min-height: 120px;
             padding: 1rem 0.4rem;
@@ -1152,15 +1005,6 @@ const Contact = () => {
 
           .contact-value {
             font-size: 0.85rem;
-          }
-
-          .social-card {
-            min-height: 80px;
-            padding: 0.7rem 0.3rem;
-          }
-
-          .social-name {
-            font-size: 0.65rem;
           }
         }
       `}</style>

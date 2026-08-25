@@ -28,6 +28,7 @@ const Navbar = () => {
     { name: 'Skills', href: '/skills' },
     { name: 'Projects', href: '/projects' },
     { name: 'Experience', href: '/experience' },
+    // { name: 'Certificates', href: '/certificates' },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -81,8 +82,8 @@ const Navbar = () => {
         <div className="nav-logo">
           {/* Profile Picture */}
           <div className="profile-pic-container">
-            <img 
-              src="/pavan.jpg" 
+            <img
+              src="/pavan.jpg"
               alt="Pavan Patil"
               className="profile-pic"
               onError={(e) => {
@@ -116,7 +117,7 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu Button */}
-        <div 
+        <div
           className={`nav-toggle ${isMenuOpen ? 'active' : ''}`}
           onClick={toggleMenu}
         >
