@@ -6,11 +6,8 @@ import {
   FaCode,
   FaTrophy,
   FaExternalLinkAlt,
-  FaGithub,
   FaGlobe,
-  FaArrowLeft,
   FaLightbulb,
-  FaHandsHelping,
 } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";

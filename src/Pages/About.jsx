@@ -82,8 +82,7 @@ const About = () => {
                 </div>
                 <div className="about_education_title_content">
                   <h4>Master of Computer Applications (MCA)</h4>
-                  <p className="about_college_name">Presidency University, Bengaluru</p>
-                  <p className="about_college_name">Presidency College, Bengaluru</p>
+                  <p className="about_college_name">Presidency College (Autonomous), Bengaluru</p>
                 </div>
               </div>
               <div className="about_education_details">
@@ -93,9 +92,9 @@ const About = () => {
                 </p>
                 <div className="about_education_progress">
                   <div className="about_progress_bar">
-                    <div className="about_progress_fill" style={{width: '10%'}}></div>
+                    <div className="about_progress_fill" style={{width: '50%'}}></div>
                   </div>
-                  <span className="about_progress_text">10% Completed</span>
+                  <span className="about_progress_text">50% Completed</span>
                 </div>
               </div>
             </div>
@@ -448,7 +447,7 @@ const About = () => {
         }
 
         .about_education_desc {
-        text-align:justfy;
+          text-align: justify;
           color: #94a3b8;
           font-size: 1rem;
           line-height: 1.6;

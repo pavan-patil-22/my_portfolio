@@ -112,7 +112,7 @@ const Experience = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .experience_section {
           padding: 4rem 0;
           background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);

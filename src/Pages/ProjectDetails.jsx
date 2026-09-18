@@ -1,189 +1,311 @@
-// src/pages/ProjectDetails.jsx
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { 
-  FaGithub, FaArrowLeft, FaArrowRight, 
-  FaCalendarAlt, FaCode, FaRocket,  FaCheckCircle,
-  FaUsers, FaLightbulb, FaExpand, FaCompress, FaTimes
+  FaArrowLeft, FaArrowRight, 
+  FaCheckCircle, FaLightbulb, FaExpand, FaTimes, FaCode
 } from "react-icons/fa";
 import { 
-  SiReact, SiNodedotjs, SiMongodb, SiExpress, SiTailwindcss,
-  SiJavascript, SiCss3, SiHtml5, SiVite, SiVercel,
-  SiPython,
-  SiTensorflow,
-  SiFlask
+  SiReact, SiNodedotjs, SiMongodb, SiExpress,
+  SiCss3, SiHtml5, SiPython, SiTensorflow, SiFlask, SiJavascript
 } from "react-icons/si";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const projects = [
- {
-  id: 1,
-  title: "Seek-AI",
-  tagline: "AI-Powered Surveillance and Complaint Management System",
-  description: "An AI-based missing person detection and complaint management system leveraging facial recognition and real-time CCTV analysis to enhance public safety and response time.",
-  longDescription: [
-    "Seek-AI is a web-based intelligent surveillance and complaint management system designed to assist in identifying and locating missing persons using AI-driven facial recognition and live CCTV feed analysis.",
-    "The platform allows citizens to register missing person complaints by uploading photos and details, which are verified by authorized personnel. Once verified, the system integrates with surveillance cameras to automatically scan live feeds for potential matches using advanced detection algorithms.",
-    "Powered by deep learning models like YOLO for object detection and DeepFace for facial recognition, Seek-AI ensures high accuracy and real-time monitoring. When a match is detected, instant alerts are sent to the complainant and concerned authorities with location details and captured footage. Built on the MERN stack, the system provides a secure, scalable, and efficient public safety solution."
-  ],
-  challenges: [
-    "Building accurate and efficient facial recognition for real-time CCTV footage",
-    "Handling large volumes of live video data with minimal latency",
-    "Ensuring system security and data privacy for sensitive information"
-  ],
-  solutions: [
-    "Integrated YOLO and DeepFace models for real-time object and face detection",
-    "Implemented efficient backend data pipelines using Node.js and MongoDB",
-    "Used secure authentication and encryption to protect user and complaint data"
-  ],
-  technologies: ["React", "Node.js", "Express", "MongoDB", "Python", "YOLO", "DeepFace", "TensorFlow"],
-  techIcons: [<SiReact />, <SiNodedotjs />, <SiExpress />, <SiMongodb />, <SiPython />, <SiTensorflow />],
-  features: [
-    "AI-powered facial recognition and detection",
-    "Complaint registration and tracking system",
-    "Real-time CCTV feed analysis and monitoring",
-    "Automated alerts with location and footage details",
-    "Admin dashboard for verification and management",
-    "Role-based access control for police and administrators",
-    "Secure data storage and encryption",
-    "Responsive and user-friendly web interface"
-  ],
-  images: [
-    "/seek-ai1.png",
-    "/seek-ai2.png",
-    "/seek-ai3.png",
-    "/seek-ai4.png",
-    "/seek-ai5.png",
-    "/seek-ai6.png",
-    "/seek-ai7.png",
-    "/seek-ai8.png",
-    "/seek-ai9.png",
-  ],
-  github: "https://github.com/pavanpatil/seek-ai",
-  demo: "https://seek-ai-demo.vercel.app/",
-  status: "Completed",
-  duration: "4 months",
-  category: "Full Stack / AI Integration",
-  teamSize: "2 developers",
-  impact: "Enabled faster and automated missing person detection with real-time alerts for improved public safety"
-},
+  {
+    id: 1,
+    title: "Seek-AI",
+    tagline: "AI-Powered Surveillance and Complaint Management System",
+    description: "An AI-based missing person detection and complaint management system leveraging facial recognition and real-time CCTV analysis to enhance public safety and response time.",
+    longDescription: [
+      "Seek-AI is a web-based intelligent surveillance and complaint management system designed to assist in identifying and locating missing persons using AI-driven facial recognition and live CCTV feed analysis.",
+      "The platform allows citizens to register missing person complaints by uploading photos and details, which are verified by authorized personnel. Once verified, the system integrates with surveillance cameras to automatically scan live feeds for potential matches using advanced detection algorithms.",
+      "Powered by deep learning models like YOLO for object detection and DeepFace for facial recognition, Seek-AI ensures high accuracy and real-time monitoring. When a match is detected, instant alerts are sent to the complainant and concerned authorities with location details and captured footage. Built on the MERN stack, the system provides a secure, scalable, and efficient public safety solution."
+    ],
+    challenges: [
+      "Building accurate and efficient facial recognition for real-time CCTV footage",
+      "Handling large volumes of live video data with minimal latency",
+      "Ensuring system security and data privacy for sensitive information"
+    ],
+    solutions: [
+      "Integrated YOLO and DeepFace models for real-time object and face detection",
+      "Implemented efficient backend data pipelines using Node.js and MongoDB",
+      "Used secure authentication and encryption to protect user and complaint data"
+    ],
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Python", "YOLO", "DeepFace", "TensorFlow"],
+    techIcons: [<SiReact />, <SiNodedotjs />, <SiExpress />, <SiMongodb />, <SiPython />, <SiTensorflow />],
+    features: [
+      "AI-powered facial recognition and detection",
+      "Complaint registration and tracking system",
+      "Real-time CCTV feed analysis and monitoring",
+      "Automated alerts with location and footage details",
+      "Admin dashboard for verification and management",
+      "Role-based access control for police and administrators",
+      "Secure data storage and encryption",
+      "Responsive and user-friendly web interface"
+    ],
+    images: [
+      "/seek-ai1.png",
+      "/seek-ai2.png",
+      "/seek-ai3.png",
+      "/seek-ai4.png",
+      "/seek-ai5.png",
+      "/seek-ai6.png",
+      "/seek-ai7.png",
+      "/seek-ai8.png",
+      "/seek-ai9.png",
+    ],
+    github: "https://github.com/pavan-patil-22/seek-ai",
+    demo: "https://seek-ai-demo.vercel.app/",
+    status: "Completed",
+    duration: "4 months",
+    category: "Full Stack / AI Integration",
+    teamSize: "2 developers",
+    impact: "Enabled faster and automated missing person detection with real-time alerts for improved public safety"
+  },
 
   {
-  id: 2,
-  title: "StegoFileShare",
-  tagline: "Steganography-Based Secure File Sharing System",
-  description: "A React-based secure file sharing platform using steganography to hide files within images, featuring password protection, wrong-attempt tracking, and admin monitoring.",
-  longDescription: [
-    "StegoFileShare is a security-focused web application that enables users to share confidential files safely through steganography — the art of hiding data within images. This system ensures privacy and security by embedding secret files inside image containers before sharing.",
-    "Users can upload a file, set a custom password, and generate a stego file that conceals the data. The receiver downloads the stego file and uses the extract tool to retrieve the hidden content using the correct password. After three consecutive wrong attempts, the user is automatically blocked to prevent unauthorized access.",
-    "For every wrong attempt, the system captures an image using the user's device camera and records the timestamp for admin review. Admins can manage users, view failed login images, and track file download activity. The platform provides a robust balance between usability and security, built using the MERN stack and integrated Python-based steganography and OpenCV modules."
-  ],
-  challenges: [
-    "Ensuring secure file transfer without direct exposure of sensitive data",
-    "Implementing efficient steganography and password protection in web-based systems",
-    "Tracking unauthorized access attempts in real-time"
-  ],
-  solutions: [
-    "Integrated Python steganography algorithms for file hiding and extraction",
-    "Implemented three-strike password protection with automatic user blocking",
-    "Added camera-based intruder capture and real-time admin monitoring"
-  ],
-  technologies: ["React", "Node.js", "Express", "MongoDB",  "HTML"],
-  techIcons: [<SiReact />, <SiNodedotjs />, <SiExpress />, <SiMongodb />, <SiHtml5/>,<SiHtml5/>],
-  features: [
-    "Steganography-based secure file embedding and extraction",
-    "Custom password protection for each file",
-    "Three-attempt lockout and auto-block mechanism",
-    "Intruder detection via device camera capture",
-    "Admin dashboard for monitoring and user management",
-    "Detailed download and activity logs",
-    "Role-based authentication system",
-    "Responsive and modern UI for seamless user experience"
-  ],
-  images: [
-    "/stegofile1.png",
-    "/stegofile2.png",
-    "/stegofile3.png",
-    "/stegofile4.png",
-    "/stegofile5.png",
-    "/stegofile6.png",
-    "/stegofile7.png",
-    "/stegofile8.png",
-    "/stegofile9.png",
-  ],
-  github: "https://github.com/pavanpatil/stegofileshare",
-  demo: "https://stegofileshare-demo.vercel.app/",
-  status: "Completed",
-  duration: "3 months",
-  category: "Full Stack / Security & Steganography",
-  teamSize: "2 developers",
-  impact: "Enhanced digital file sharing privacy and introduced AI-assisted intrusion tracking for secure communication"
-},
-{
-  id: 3,
-  title: "HeartScan AI",
-  tagline: "AI-Powered Heart Attack Risk Prediction from Retinal Scans",
-  description:
-    "HeartScan AI is a deep learning-based healthcare platform that predicts cardiovascular risks, such as heart attack probability, using retinal scan images — enabling early detection and preventive care through AI insights.",
-  longDescription: [
-    "HeartScan AI is an innovative healthcare application that leverages advanced deep learning algorithms to analyze retinal images and assess cardiovascular health risks. The system detects early signs of potential heart-related conditions by identifying subtle retinal biomarkers that correlate with heart health.",
-    "Built for medical professionals and diagnostic centers, HeartScan AI enables faster, non-invasive health assessments. It processes retinal images through trained neural networks to predict risk levels and provide detailed, AI-assisted diagnostic reports.",
-    "The platform also offers a modern, user-friendly interface where users can upload retinal scans, view prediction results, and receive AI-generated recommendations for preventive action. The project demonstrates the integration of healthcare and artificial intelligence for early risk prediction and improved patient outcomes."
-  ],
-  challenges: [
-    "Developing a high-accuracy AI model for retinal image analysis",
-    "Ensuring reliable prediction results for medical use",
-    "Designing an intuitive, accessible UI for both medical and non-technical users"
-  ],
-  solutions: [
-    "Trained CNN-based AI models for retinal image classification and heart risk prediction",
-    "Integrated explainable AI (XAI) components to visualize prediction insights",
-    "Built a modern, responsive UI with clear data visualization and accessibility in mind"
-  ],
-  technologies: ["React", "TensorFlow", "Flask", "Python", "Node.js", "MongoDB", "CSS"],
-  techIcons: [
-    <SiReact />,
-    <SiTensorflow />,
-    <SiFlask />,
-    <SiPython />,
-    <SiNodedotjs />,
-    <SiMongodb />,
-    <SiCss3 />,
-  ],
-  features: [
-    "AI-based heart attack risk prediction using retinal scans",
-    "Deep learning model with high-accuracy classification",
-    "Interactive report generation and visual insights",
-    "Secure scan upload and analysis system",
-    "Explainable AI visualization (Grad-CAM heatmaps)",
-    "User-friendly dashboard for patients and doctors",
-    "Scalable architecture for future healthcare integrations",
-    "Responsive, minimal, and elegant UI"
-  ],
-  images: [
-    "/heartscan1.png",
-    "/heartscan2.png",
-    "/heartscan3.png",
-    "/heartscan4.png",
-    "/heartscan5.png",
-    "/heartscan6.png",
-    "/heartscan7.png",
-    "/heartscan8.png",
-    "/heartscan9.png",
-    "/heartscan5.png",
-  ],
-  github: "https://github.com/pavanpatil/heartscan-ai",
-  demo: "https://heartscan-ai.vercel.app/",
-  status: "In Progress",
-  duration: "3 months",
-  category: "AI / Deep Learning / Healthcare",
-  teamSize: "2 developers",
-  impact:
-    "Bringing early heart attack risk prediction to the forefront of digital healthcare, enabling proactive medical intervention through AI-driven retinal image analysis."
-}
-
-
+    id: 2,
+    title: "StegoFileShare",
+    tagline: "Steganography-Based Secure File Sharing System",
+    description: "A React-based secure file sharing platform using steganography to hide files within images, featuring password protection, wrong-attempt tracking, and admin monitoring.",
+    longDescription: [
+      "StegoFileShare is a security-focused web application that enables users to share confidential files safely through steganography — the art of hiding data within images. This system ensures privacy and security by embedding secret files inside image containers before sharing.",
+      "Users can upload a file, set a custom password, and generate a stego file that conceals the data. The receiver downloads the stego file and uses the extract tool to retrieve the hidden content using the correct password. After three consecutive wrong attempts, the user is automatically blocked to prevent unauthorized access.",
+      "For every wrong attempt, the system captures an image using the user's device camera and records the timestamp for admin review. Admins can manage users, view failed login images, and track file download activity. The platform provides a robust balance between usability and security, built using the MERN stack and integrated Python-based steganography and OpenCV modules."
+    ],
+    challenges: [
+      "Ensuring secure file transfer without direct exposure of sensitive data",
+      "Implementing efficient steganography and password protection in web-based systems",
+      "Tracking unauthorized access attempts in real-time"
+    ],
+    solutions: [
+      "Integrated Python steganography algorithms for file hiding and extraction",
+      "Implemented three-strike password protection with automatic user blocking",
+      "Added camera-based intruder capture and real-time admin monitoring"
+    ],
+    technologies: ["React", "Node.js", "Express", "MongoDB", "HTML"],
+    techIcons: [<SiReact />, <SiNodedotjs />, <SiExpress />, <SiMongodb />, <SiHtml5 />],
+    features: [
+      "Steganography-based secure file embedding and extraction",
+      "Custom password protection for each file",
+      "Three-attempt lockout and auto-block mechanism",
+      "Intruder detection via device camera capture",
+      "Admin dashboard for monitoring and user management",
+      "Detailed download and activity logs",
+      "Role-based authentication system",
+      "Responsive and modern UI for seamless user experience"
+    ],
+    images: [
+      "/stegofile1.png",
+      "/stegofile2.png",
+      "/stegofile3.png",
+      "/stegofile4.png",
+      "/stegofile5.png",
+      "/stegofile6.png",
+      "/stegofile7.png",
+      "/stegofile8.png",
+      "/stegofile9.png",
+    ],
+    github: "https://github.com/pavan-patil-22/stegofileshare",
+    demo: "https://stegofileshare-demo.vercel.app/",
+    status: "Completed",
+    duration: "3 months",
+    category: "Full Stack / Security & Steganography",
+    teamSize: "2 developers",
+    impact: "Enhanced digital file sharing privacy and introduced AI-assisted intrusion tracking for secure communication"
+  },
+  {
+    id: 3,
+    title: "HeartScan AI",
+    tagline: "AI-Powered Heart Attack Risk Prediction from Retinal Scans",
+    description: "HeartScan AI is a deep learning-based healthcare platform that predicts cardiovascular risks, such as heart attack probability, using retinal scan images — enabling early detection and preventive care through AI insights.",
+    longDescription: [
+      "HeartScan AI is an innovative healthcare application that leverages advanced deep learning algorithms to analyze retinal images and assess cardiovascular health risks. The system detects early signs of potential heart-related conditions by identifying subtle retinal biomarkers that correlate with heart health.",
+      "Built for medical professionals and diagnostic centers, HeartScan AI enables faster, non-invasive health assessments. It processes retinal images through trained neural networks to predict risk levels and provide detailed, AI-assisted diagnostic reports.",
+      "The platform also offers a modern, user-friendly interface where users can upload retinal scans, view prediction results, and receive AI-generated recommendations for preventive action. The project demonstrates the integration of healthcare and artificial intelligence for early risk prediction and improved patient outcomes."
+    ],
+    challenges: [
+      "Developing a high-accuracy AI model for retinal image analysis",
+      "Ensuring reliable prediction results for medical use",
+      "Designing an intuitive, accessible UI for both medical and non-technical users"
+    ],
+    solutions: [
+      "Trained CNN-based AI models for retinal image classification and heart risk prediction",
+      "Integrated explainable AI (XAI) components to visualize prediction insights",
+      "Built a modern, responsive UI with clear data visualization and accessibility in mind"
+    ],
+    technologies: ["React", "TensorFlow", "Flask", "Python", "Node.js", "MongoDB", "CSS"],
+    techIcons: [
+      <SiReact />,
+      <SiTensorflow />,
+      <SiFlask />,
+      <SiPython />,
+      <SiNodedotjs />,
+      <SiMongodb />,
+      <SiCss3 />,
+    ],
+    features: [
+      "AI-based heart attack risk prediction using retinal scans",
+      "Deep learning model with high-accuracy classification",
+      "Interactive report generation and visual insights",
+      "Secure scan upload and analysis system",
+      "Explainable AI visualization (Grad-CAM heatmaps)",
+      "User-friendly dashboard for patients and doctors",
+      "Scalable architecture for future healthcare integrations",
+      "Responsive, minimal, and elegant UI"
+    ],
+    images: [
+      "/heartscan1.png",
+      "/heartscan2.png",
+      "/heartscan3.png",
+      "/heartscan4.png",
+      "/heartscan5.png",
+      "/heartscan6.png",
+      "/heartscan7.png",
+      "/heartscan8.png",
+      "/heartscan9.png",
+    ],
+    github: "https://github.com/pavan-patil-22/heartscan-ai",
+    demo: "https://heartscan-ai.vercel.app/",
+    status: "In Progress",
+    duration: "3 months",
+    category: "AI / Deep Learning / Healthcare",
+    teamSize: "2 developers",
+    impact: "Bringing early heart attack risk prediction to the forefront of digital healthcare, enabling proactive medical intervention through AI-driven retinal image analysis."
+  },
+  {
+    id: 4,
+    title: "Ligand Software Solutions – Official Website",
+    tagline: "Corporate Portal & Client Showcase Website",
+    description: "A fully responsive corporate website built for Ligand Software Solutions, featuring service portfolios, project showcases, and contact integration.",
+    longDescription: [
+      "Ligand Software Solutions official portal showcases company services, client testimonials, and technological capabilities in a modern, ultra-responsive layout.",
+      "Built with React and optimized CSS, it delivers fast page speeds, smooth animations, and seamless contact interactions for prospective business clients."
+    ],
+    challenges: [
+      "Delivering high performance with rich visual elements",
+      "Ensuring seamless cross-device design parity"
+    ],
+    solutions: [
+      "Leveraged React component architecture and lazy loading",
+      "Optimized asset pipelines and responsive breakpoints"
+    ],
+    technologies: ["React", "Node.js", "MongoDB", "CSS3"],
+    techIcons: [<SiReact />, <SiNodedotjs />, <SiMongodb />, <SiCss3 />],
+    features: [
+      "Interactive service showcase",
+      "Contact form with direct notification integration",
+      "Fully responsive corporate layout"
+    ],
+    images: ["/ligand.jpg"],
+    github: "https://github.com/pavan-patil-22/ligand-website",
+    demo: "https://ligandsoftware.com",
+    status: "Completed",
+    duration: "2 months",
+    category: "Full Stack / Web Development",
+    teamSize: "2 developers",
+    impact: "Boosted client inquiries and established a strong digital presence for the company."
+  },
+  {
+    id: 5,
+    title: "SDVS'S BCA – Official Website",
+    tagline: "Official Academic Institution Portal",
+    description: "Official web platform for SDVS's BCA College, Sankeshwar, providing academic announcements, program details, and admissions info.",
+    longDescription: [
+      "Developed for SDVS's BCA College to keep students and prospective applicants updated with college events, syllabus, faculty directories, and notices.",
+      "Presents a clean institutional brand with intuitive navigation and accessibility features."
+    ],
+    challenges: [
+      "Structuring diverse academic information clearly for students and parents",
+      "Ensuring mobile accessibility for students with low network bandwidth"
+    ],
+    solutions: [
+      "Created structured grid layouts and fast-loading media elements",
+      "Implemented streamlined navigation menus"
+    ],
+    technologies: ["React", "Node.js", "MongoDB", "HTML5", "CSS3"],
+    techIcons: [<SiReact />, <SiNodedotjs />, <SiMongodb />, <SiHtml5 />, <SiCss3 />],
+    features: [
+      "Academic course catalog and syllabus viewer",
+      "Notice board and exam notifications",
+      "Admissions inquiry portal"
+    ],
+    images: ["/sdvsbca.png"],
+    github: "https://github.com/pavan-patil-22/sdvs-bca-website",
+    demo: "https://sdvssbcasnk.com",
+    status: "Completed",
+    duration: "2 months",
+    category: "Full Stack",
+    teamSize: "2 developers",
+    impact: "Digitized college announcements and simplified student admissions inquiries."
+  },
+  {
+    id: 6,
+    title: "Gururaj Foundation – NGO Website",
+    tagline: "Non-Profit Organization & Donation Portal",
+    description: "Built a responsive community portal for Gururaj Foundation NGO to highlight initiatives, event drives, and community welfare programs.",
+    longDescription: [
+      "Gururaj Foundation web app presents NGO drives, community initiatives, photo galleries, and volunteer signup forms.",
+      "Focuses on accessibility, fast load times, and clear calls to action to encourage volunteer participation."
+    ],
+    challenges: [
+      "Designing a clean, impactful user experience for non-tech audiences",
+      "Optimizing media content for quick loading on mobile"
+    ],
+    solutions: [
+      "Used clean semantic HTML/CSS and minimal lightweight JavaScript",
+      "Compressed gallery images and integrated accessible components"
+    ],
+    technologies: ["HTML5", "CSS3", "JavaScript"],
+    techIcons: [<SiHtml5 />, <SiCss3 />, <SiJavascript />],
+    features: [
+      "Community project showcases & impact metrics",
+      "Volunteer registration form",
+      "Accessible responsive layout"
+    ],
+    images: ["/gururaj.jpg"],
+    github: "https://github.com/pavan-patil-22/gururaj-foundation",
+    demo: "https://gururajfoundation.com",
+    status: "Completed",
+    duration: "1 month",
+    category: "Frontend",
+    teamSize: "1 developer",
+    impact: "Helped the NGO expand its reach and streamline volunteer signups."
+  },
+  {
+    id: 7,
+    title: "Ligand WorkSpace (Ongoing)",
+    tagline: "MERN-based Learning Management & Workspace System",
+    description: "An advanced Learning Management System with attendance tracking, homework evaluations, fee records, and admin access control.",
+    longDescription: [
+      "Ligand WorkSpace is an ongoing enterprise LMS platform engineered for educational institutions and workspace management.",
+      "Includes role-based modules for teachers, students, and administrators to track assignments, grades, attendance, and project submissions."
+    ],
+    challenges: [
+      "Designing complex multi-role authorization hierarchies",
+      "Handling real-time attendance tracking and report generation"
+    ],
+    solutions: [
+      "Implemented JWT authentication with role-based permissions",
+      "Created REST API endpoints for automated report compiling"
+    ],
+    technologies: ["React", "Node.js", "Express", "MongoDB"],
+    techIcons: [<SiReact />, <SiNodedotjs />, <SiExpress />, <SiMongodb />],
+    features: [
+      "Role-based access control (Student/Teacher/Admin)",
+      "Homework evaluation and project submission tracking",
+      "Attendance and fee management reporting"
+    ],
+    images: ["/workspace.jpg"],
+    github: "https://github.com/pavan-patil-22/ligand-workspace",
+    demo: "https://liganddevelopers.vercel.app/",
+    status: "In Progress",
+    duration: "Ongoing",
+    category: "Full Stack",
+    teamSize: "4 developers",
+    impact: "Streamlines institute workspace logistics and student assignment grading."
+  }
 ];
 
 const ProjectDetails = () => {

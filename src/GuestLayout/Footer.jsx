@@ -14,7 +14,7 @@ const Footer = () => {
     {
       name: 'GitHub',
       icon: <FaGithub />,
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/pavan-patil-22',
       color: '#333'
     },
     
@@ -27,7 +27,7 @@ const Footer = () => {
     {
       name: 'Instagram',
       icon: <FaInstagram />,
-      url: 'https://github.com/pavan-patil-22',
+      url: 'https://instagram.com/pavan_patil_22',
       color: '#e4405f'
     },
   ];
@@ -41,12 +41,12 @@ const Footer = () => {
     {
       icon: <FaPhone />,
       text: '+91 9110413455',
-      url: 'tel:+91 9110413455'
+      url: 'tel:+919110413455'
     },
     {
       icon: <FaEnvelope />,
-      text: 'pavanpatil@gmail.com',
-      url: 'mailto:pavanpatil2204'
+      text: 'pavanpatil2204@gmail.com',
+      url: 'mailto:pavanpatil2204@gmail.com'
     }
   ];
 
@@ -75,12 +75,13 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="section-title">Quick Links</h4>
             <ul className="footer-links">
-              <li><a href="#home" className="footer-link">Home</a></li>
-              <li><a href="#about" className="footer-link">About</a></li>
-              <li><a href="#skills" className="footer-link">Skills</a></li>
-              <li><a href="#projects" className="footer-link">Projects</a></li>
-              <li><a href="#experience" className="footer-link">Experience</a></li>
-              <li><a href="#contact" className="footer-link">Contact</a></li>
+              <li><a href="/home" className="footer-link">Home</a></li>
+              <li><a href="/about" className="footer-link">About</a></li>
+              <li><a href="/skills" className="footer-link">Skills</a></li>
+              <li><a href="/projects" className="footer-link">Projects</a></li>
+              <li><a href="/experience" className="footer-link">Experience</a></li>
+              <li><a href="/certificates" className="footer-link">Certificates</a></li>
+              <li><a href="/contact" className="footer-link">Contact</a></li>
             </ul>
           </div>
 
@@ -137,7 +138,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .footer {
           background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
           color: #e2e8f0;
@@ -446,12 +447,6 @@ const Footer = () => {
           .copyright, .footer-note {
             font-size: 0.85rem;
           }
-        }
-
-        /* Smooth transitions */
-        * {
-          transition: color 0.3s ease, background-color 0.3s ease, 
-                     transform 0.3s ease, border-color 0.3s ease;
         }
       `}</style>
     </footer>

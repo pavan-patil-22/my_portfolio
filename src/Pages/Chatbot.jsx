@@ -314,7 +314,7 @@ Interaction Rules:
                     Authorization: `Bearer ${API_KEY}`,
                 },
                 body: JSON.stringify({
-                    model: "llama-3.1-8b-instant",
+                    model: "openai/gpt-oss-120b",
                     messages: [
                         { role: "system", content: RESUME_CONTEXT },
                         ...updatedMessages,

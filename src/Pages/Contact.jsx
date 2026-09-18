@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FaWhatsapp, FaPaperPlane, FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaEnvelope, FaMapMarkerAlt, FaPhone, FaRocket, FaSmile, FaHeart } from "react-icons/fa";
-import { SiLeetcode, SiCodechef } from "react-icons/si";
+import { FaWhatsapp, FaLinkedin, FaGithub, FaInstagram, FaEnvelope, FaMapMarkerAlt, FaPhone, FaSmile, FaRocket } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
@@ -121,7 +121,7 @@ const Contact = () => {
     {
       icon: <FaLinkedin className="text-xl" />,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/pavanpatil",
+      url: "https://www.linkedin.com/in/pavan-patil-279183369/",
       color: "hover:bg-blue-600 border-blue-500",
       bgColor: "bg-blue-500",
       animation: "flip-left"
@@ -129,23 +129,15 @@ const Contact = () => {
     {
       icon: <FaGithub className="text-xl" />,
       name: "GitHub",
-      url: "https://github.com/pavanpatil",
+      url: "https://github.com/pavan-patil-22",
       color: "hover:bg-gray-800 border-gray-700",
       bgColor: "bg-gray-700",
       animation: "flip-left"
     },
     {
-      icon: <FaTwitter className="text-xl" />,
-      name: "Twitter",
-      url: "https://twitter.com/pavanpatil",
-      color: "hover:bg-blue-400 border-blue-400",
-      bgColor: "bg-blue-400",
-      animation: "flip-left"
-    },
-    {
       icon: <FaInstagram className="text-xl" />,
       name: "Instagram",
-      url: "https://instagram.com/pavanpatil",
+      url: "https://instagram.com/pavan_patil_22",
       color: "hover:bg-pink-600 border-pink-500",
       bgColor: "bg-pink-500",
       animation: "flip-left"
@@ -153,17 +145,9 @@ const Contact = () => {
     {
       icon: <SiLeetcode className="text-xl" />,
       name: "LeetCode",
-      url: "https://leetcode.com/pavanpatil",
+      url: "https://leetcode.com/u/pavan-patil-22/",
       color: "hover:bg-orange-500 border-orange-500",
       bgColor: "bg-orange-500",
-      animation: "flip-left"
-    },
-    {
-      icon: <SiCodechef className="text-xl" />,
-      name: "CodeChef",
-      url: "https://codechef.com/users/pavanpatil",
-      color: "hover:bg-red-500 border-red-500",
-      bgColor: "bg-red-500",
       animation: "flip-left"
     }
   ];

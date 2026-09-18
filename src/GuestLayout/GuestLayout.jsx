@@ -31,7 +31,7 @@ const GuestLayout = () => {
       <div
         style={{
           flex: 1,
-          marginTop: isMobile ? "80px" : "60px", // Push content below header
+          marginTop: isMobile ? "80px" : "84px", // Push content below fixed header
         }}
       >
         <Outlet />

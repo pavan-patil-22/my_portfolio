@@ -28,19 +28,17 @@ const Navbar = () => {
     { name: 'Skills', href: '/skills' },
     { name: 'Projects', href: '/projects' },
     { name: 'Experience', href: '/experience' },
-    // { name: 'Certificates', href: '/certificates' },
+    { name: 'Certificates', href: '/certificates' },
     { name: 'Contact', href: '/contact' }
   ];
 
   const handleNavClick = (href) => {
     setIsMenuOpen(false);
 
-    // If href is a route path (starts with '/'), use router navigation
     if (typeof href === 'string' && href.startsWith('/')) {
-      // If we're already on the homepage and the path matches a section (e.g. '/contact'),
-      // try to scroll to the element with that id first. Otherwise navigate.
-      const sectionId = href.replace(/^\//, ''); // 'contact'
-      if (window.location.pathname === '/' || window.location.pathname === '') {
+      const sectionId = href.replace(/^\//, '');
+      const isHomePage = window.location.pathname === '/' || window.location.pathname === '/home';
+      if (isHomePage) {
         const el = document.getElementById(sectionId) || document.querySelector(`#${sectionId}`);
         if (el) {
           el.scrollIntoView({ behavior: 'smooth' });
@@ -48,12 +46,10 @@ const Navbar = () => {
         }
       }
 
-      // Not on home, or element not found: navigate to route
       navigate(href);
       return;
     }
 
-    // If href is a hash/fragment like '#about'
     if (typeof href === 'string' && href.startsWith('#')) {
       const el = document.querySelector(href);
       if (el) {
@@ -62,13 +58,10 @@ const Navbar = () => {
       return;
     }
 
-    // Fallback: try querying the selector only if it looks like an id selector
     try {
       const el = document.querySelector(href);
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     } catch (err) {
-      // invalid selector (e.g. '/contact'), do nothing or navigate to href
-      // as a safe fallback, navigate if it's a path-like string
       if (typeof href === 'string' && href.startsWith('/')) {
         navigate(href);
       }
@@ -399,11 +392,6 @@ const Navbar = () => {
               width: 40px;
               height: 40px;
             }
-          }
-
-          /* Smooth transitions for all interactive elements */
-          * {
-            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
           }
 
           /* Custom scrollbar for webkit browsers */

@@ -1,13 +1,9 @@
-// src/pages/Project.jsx
-import React from "react";
+// src/pages/Projects.jsx
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   FaExternalLinkAlt,
-  FaGithub,
   FaArrowRight,
-  FaCode,
-  FaMobileAlt,
-  FaDesktop,
 } from "react-icons/fa";
 import {
   SiReact,
@@ -20,7 +16,6 @@ import {
   SiTensorflow,
   SiHtml5,
 } from "react-icons/si";
-import LiveProject from "./LiveProject";
 
 const projects = [
   {
@@ -30,12 +25,12 @@ const projects = [
       "An AI-based missing person detection and complaint management system with real-time CCTV analysis.",
     thumbnail: "t-seek-ai.png",
     technologies: [
-      <SiReact />,
-      <SiNodedotjs />,
-      <SiMongodb />,
-      <SiExpress />,
-      <SiPython />,
-      <SiTensorflow />,
+      <SiReact key="1" />,
+      <SiNodedotjs key="2" />,
+      <SiMongodb key="3" />,
+      <SiExpress key="4" />,
+      <SiPython key="5" />,
+      <SiTensorflow key="6" />,
     ],
     techNames: [
       "React",
@@ -46,36 +41,10 @@ const projects = [
       "TensorFlow",
     ],
     liveUrl: "",
-    githubUrl: "https://github.com/pavanpatil/seek-ai",
+    githubUrl: "https://github.com/pavan-patil-22/seek-ai",
     category: "Full Stack / AI & Security",
     featured: true,
   },
-  {
-    id: 2,
-    title: "Ligand Software Solutions – Official Website",
-    description:
-      "A fully responsive and modern corporate website built for Ligand Software Solutions, featuring service pages, project showcases, contact modules, and optimized performance for a professional client-facing experience.",
-    thumbnail: "ligand.jpg",
-    technologies: [<SiReact />, <SiNodedotjs />, <SiMongodb />],
-    techNames: ["React", "Node.js", "MongoDB"],
-    liveUrl: "https://ligandsoftware.com",
-    githubUrl: "https://github.com/pavanpatil/ligand-website", // optional
-    category: "Full Stack",
-    featured: true,
-  },
-  {
-    id: 2,
-    title: "SDVS'S BCA– Official Website",
-    description:"Developed the official website for SDVS’s BCA College, Sankeshwar, providing a responsive, user-friendly platform to showcase academic programs, admissions, and institutional information with a clean and professional design.",
-    thumbnail: "sdvsbca.png",
-    technologies: [<SiReact />, <SiNodedotjs />, <SiMongodb />],
-    techNames: ["React", "Node.js", "MongoDB"],
-    liveUrl: "https://sdvssbcasnk.com",
-    githubUrl: "https://github.com/pavanpatil/ligand-website", // optional
-    category: "Full Stack",
-    featured: true,
-  },
-
   {
     id: 2,
     title: "StegoFileShare",
@@ -83,20 +52,19 @@ const projects = [
       "A steganography-based secure file sharing system with password protection, wrong-attempt tracking, and admin monitoring.",
     thumbnail: "StegoFileShare.png",
     technologies: [
-      <SiReact />,
-      <SiNodedotjs />,
-      <SiExpress />,
-      <SiMongodb />,
-      <SiHtml5 />,
-      <SiCss3 />,
+      <SiReact key="1" />,
+      <SiNodedotjs key="2" />,
+      <SiExpress key="3" />,
+      <SiMongodb key="4" />,
+      <SiHtml5 key="5" />,
+      <SiCss3 key="6" />,
     ],
     techNames: ["React", "Node.js", "Express", "MongoDB"],
     liveUrl: "",
-    githubUrl: "https://github.com/pavanpatil/stegofileshare",
+    githubUrl: "https://github.com/pavan-patil-22/stegofileshare",
     category: "Full Stack / Security",
     featured: true,
   },
-
   {
     id: 3,
     title: "HeartScan AI",
@@ -104,12 +72,12 @@ const projects = [
       "An AI-powered cardiovascular risk assessment system that analyzes retinal images to predict heart health and offers doctor appointment scheduling.",
     thumbnail: "t-HeartScan AI.png",
     technologies: [
-      <SiReact />,
-      <SiNodedotjs />,
-      <SiExpress />,
-      <SiMongodb />,
-      <SiPython />,
-      <SiTensorflow />,
+      <SiReact key="1" />,
+      <SiNodedotjs key="2" />,
+      <SiExpress key="3" />,
+      <SiMongodb key="4" />,
+      <SiPython key="5" />,
+      <SiTensorflow key="6" />,
     ],
     techNames: [
       "React",
@@ -120,34 +88,59 @@ const projects = [
       "TensorFlow",
     ],
     liveUrl: "",
-    githubUrl: "https://github.com/pavanpatil/heartscanai",
+    githubUrl: "https://github.com/pavan-patil-22/heartscan-ai",
     category: "Full Stack / AI & HealthTech",
     featured: true,
   },
-
+  {
+    id: 4,
+    title: "Ligand Software Solutions – Official Website",
+    description:
+      "A fully responsive and modern corporate website built for Ligand Software Solutions, featuring service pages, project showcases, contact modules, and optimized performance.",
+    thumbnail: "ligand.jpg",
+    technologies: [<SiReact key="1" />, <SiNodedotjs key="2" />, <SiMongodb key="3" />],
+    techNames: ["React", "Node.js", "MongoDB"],
+    liveUrl: "https://ligandsoftware.com",
+    githubUrl: "https://github.com/pavan-patil-22/ligand-website",
+    category: "Full Stack",
+    featured: true,
+  },
   {
     id: 5,
+    title: "SDVS'S BCA– Official Website",
+    description:
+      "Developed the official website for SDVS’s BCA College, Sankeshwar, providing a responsive, user-friendly platform to showcase academic programs, admissions, and institutional information.",
+    thumbnail: "sdvsbca.png",
+    technologies: [<SiReact key="1" />, <SiNodedotjs key="2" />, <SiMongodb key="3" />],
+    techNames: ["React", "Node.js", "MongoDB"],
+    liveUrl: "https://sdvssbcasnk.com",
+    githubUrl: "https://github.com/pavan-patil-22/sdvs-bca-website",
+    category: "Full Stack",
+    featured: true,
+  },
+  {
+    id: 6,
     title: "Gururaj Foundation – NGO Website",
     description:
-      "Built a clean and responsive website for a local NGO to showcase missions, activities, donation details, and community programs with accessible navigation and well-structured content.",
+      "Built a clean and responsive website for a local NGO to showcase missions, activities, donation details, and community programs with accessible navigation.",
     thumbnail: "gururaj.jpg",
-    technologies: [<SiHtml5 />, <SiCss3 />, <SiJavascript />],
+    technologies: [<SiHtml5 key="1" />, <SiCss3 key="2" />, <SiJavascript key="3" />],
     techNames: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://gururajfoundation.com", // replace if needed
-    githubUrl: "https://github.com/pavanpatil/gururaj-foundation", // optional
+    liveUrl: "https://gururajfoundation.com",
+    githubUrl: "https://github.com/pavan-patil-22/gururaj-foundation",
     category: "Frontend",
     featured: false,
   },
   {
     id: 7,
-    title: "Ligand WorkSpace  (Ongoing)",
+    title: "Ligand WorkSpace (Ongoing)",
     description:
-      "Designed and developed an advanced Learning Management System using the MERN stack as part of a 4-member team. Includes features such as attendance tracking, homework evaluation, fee management, project grouping, and secure admin-controlled access for students and teachers.",
+      "Designed and developed an advanced Learning Management System using the MERN stack with features such as attendance tracking, homework evaluation, and project management.",
     thumbnail: "workspace.jpg",
-    technologies: [<SiReact />, <SiNodedotjs />, <SiMongodb />, <SiExpress />],
+    technologies: [<SiReact key="1" />, <SiNodedotjs key="2" />, <SiMongodb key="3" />, <SiExpress key="4" />],
     techNames: ["React", "Node.js", "MongoDB", "Express"],
-    liveUrl: "https://liganddevelopers.vercel.app/", // replace if not deployed
-    githubUrl: "https://github.com/pavanpatil/ligand-workspace", // optional
+    liveUrl: "https://liganddevelopers.vercel.app/",
+    githubUrl: "https://github.com/pavan-patil-22/ligand-workspace",
     category: "Full Stack",
     featured: true,
   },
@@ -155,6 +148,8 @@ const projects = [
 
 const Project = () => {
   const navigate = useNavigate();
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <div className="projects-page">
       {/* Header Section */}
@@ -178,8 +173,8 @@ const Project = () => {
             {projects.map((project, idx) => (
               <div
                 key={project.id}
-                className={`project-card ${project.featured ? "" : ""} ${
-                  idx >= 2 ? "mobile-hidden" : ""
+                className={`project-card ${
+                  idx >= 2 && !isExpanded ? "mobile-hidden" : ""
                 }`}
                 data-aos="fade-up"
                 data-aos-delay={project.id * 100}
@@ -194,9 +189,6 @@ const Project = () => {
                   <div className="project-overlay">
                     <div className="project-links"></div>
                   </div>
-                  {/* <div className="project-category">
-                    {project.category}
-                  </div> */}
                 </div>
 
                 {/* Project Content */}
@@ -204,58 +196,38 @@ const Project = () => {
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-description">{project.description}</p>
 
-                  {/* Technologies
-                  <div className="project-technologies">
-                    <div className="tech-icons">
-                      {project.technologies.map((tech, index) => (
-                        <div key={index} className="tech-icon" title={project.techNames[index]}>
-                          {tech}
-                        </div>
-                      ))}
-                    </div>
-                    <span className="tech-count">{project.technologies.length} techs</span>
-                  </div> */}
-
-                  {/* Action Buttons - Show Live Link if available, else View Details */}
-                  <div className="project-actions">
-                    {project.liveUrl ? (
+                  {/* Action Buttons */}
+                  <div className="project-actions" style={{ display: "flex", gap: "0.8rem", flexWrap: "wrap" }}>
+                    <Link
+                      to={`/projects/${project.id}`}
+                      className="project-details-btn"
+                    >
+                      View Details <FaArrowRight />
+                    </Link>
+                    {project.liveUrl && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="project-details-btn"
+                        style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)" }}
                       >
                         Live Link <FaExternalLinkAlt />
                       </a>
-                    ) : (
-                      <Link
-                        to={`/projects/${project.id}`}
-                        className="project-details-btn"
-                      >
-                        View Details <FaArrowRight />
-                      </Link>
                     )}
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          {/* Mobile View All button - toggles showing all projects on small screens */}
+
+          {/* Mobile View All button */}
           <div className="mobile_projects_view_wrap">
             <button
               className="mobile_projects_view_btn"
-              onClick={() => {
-                const root = document.documentElement;
-                const expanded =
-                  root.getAttribute("data-projects-expanded") === "true";
-                root.setAttribute(
-                  "data-projects-expanded",
-                  (!expanded).toString()
-                );
-              }}
-              aria-expanded={false}
+              onClick={() => setIsExpanded(!isExpanded)}
             >
-              {/* text handled by CSS ::after content for consistent styling */}
+              {isExpanded ? "Show Less Projects" : "View All Projects"}
             </button>
           </div>
         </div>

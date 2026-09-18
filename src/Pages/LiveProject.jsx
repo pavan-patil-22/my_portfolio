@@ -1,7 +1,7 @@
 // src/pages/LiveProject.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaExternalLinkAlt, FaGithub, FaArrowRight, FaCode, FaMobileAlt, FaDesktop, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaArrowRight, FaMobileAlt, FaDesktop, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { SiReact, SiNodedotjs, SiMongodb, SiExpress, SiJavascript, SiCss3, SiHtml5 } from "react-icons/si";
 
 const liveProjects = [

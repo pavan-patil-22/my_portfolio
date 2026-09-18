@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaDownload, FaCode } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaCode } from 'react-icons/fa';
 import { SiMongodb, SiExpress, SiReact, SiNodedotjs } from 'react-icons/si';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -8,6 +8,7 @@ import About from './About';
 import Skills from './Skills';
 import Experience from './Experience';
 import Projects from './Projects';
+import Certificates from './Certificates';
 import Contact from './Contact';
 
 const Home = () => {
@@ -738,6 +739,7 @@ const Home = () => {
         <Skills/>
         <Experience/>
         <Projects/>
+        <Certificates/>
         <Contact/>
       </div>
     </div>
