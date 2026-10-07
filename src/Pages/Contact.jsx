@@ -1,3 +1,4 @@
+// src/pages/Contact.jsx
 import React, { useState, useEffect } from "react";
 import { FaWhatsapp, FaLinkedin, FaGithub, FaInstagram, FaEnvelope, FaMapMarkerAlt, FaPhone, FaSmile, FaRocket } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
@@ -309,8 +310,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      
 
       <style jsx>{`
         .contact-page {
