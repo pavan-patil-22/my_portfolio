@@ -1,10 +1,7 @@
 // src/pages/Projects.jsx
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  FaExternalLinkAlt,
-  FaArrowRight,
-} from "react-icons/fa";
+import { FaExternalLinkAlt, FaArrowRight } from "react-icons/fa";
 import {
   SiReact,
   SiNodedotjs,
@@ -98,7 +95,11 @@ const projects = [
     description:
       "A fully responsive and modern corporate website built for Ligand Software Solutions, featuring service pages, project showcases, contact modules, and optimized performance.",
     thumbnail: "ligand.jpg",
-    technologies: [<SiReact key="1" />, <SiNodedotjs key="2" />, <SiMongodb key="3" />],
+    technologies: [
+      <SiReact key="1" />,
+      <SiNodedotjs key="2" />,
+      <SiMongodb key="3" />,
+    ],
     techNames: ["React", "Node.js", "MongoDB"],
     liveUrl: "https://ligandsoftware.com",
     githubUrl: "https://github.com/pavan-patil-22/ligand-website",
@@ -111,7 +112,11 @@ const projects = [
     description:
       "Developed the official website for SDVS’s BCA College, Sankeshwar, providing a responsive, user-friendly platform to showcase academic programs, admissions, and institutional information.",
     thumbnail: "sdvsbca.png",
-    technologies: [<SiReact key="1" />, <SiNodedotjs key="2" />, <SiMongodb key="3" />],
+    technologies: [
+      <SiReact key="1" />,
+      <SiNodedotjs key="2" />,
+      <SiMongodb key="3" />,
+    ],
     techNames: ["React", "Node.js", "MongoDB"],
     liveUrl: "https://sdvssbcasnk.com",
     githubUrl: "https://github.com/pavan-patil-22/sdvs-bca-website",
@@ -124,7 +129,11 @@ const projects = [
     description:
       "Built a clean and responsive website for a local NGO to showcase missions, activities, donation details, and community programs with accessible navigation.",
     thumbnail: "gururaj.jpg",
-    technologies: [<SiHtml5 key="1" />, <SiCss3 key="2" />, <SiJavascript key="3" />],
+    technologies: [
+      <SiHtml5 key="1" />,
+      <SiCss3 key="2" />,
+      <SiJavascript key="3" />,
+    ],
     techNames: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://gururajfoundation.com",
     githubUrl: "https://github.com/pavan-patil-22/gururaj-foundation",
@@ -137,7 +146,12 @@ const projects = [
     description:
       "Designed and developed an advanced Learning Management System using the MERN stack with features such as attendance tracking, homework evaluation, and project management.",
     thumbnail: "workspace.jpg",
-    technologies: [<SiReact key="1" />, <SiNodedotjs key="2" />, <SiMongodb key="3" />, <SiExpress key="4" />],
+    technologies: [
+      <SiReact key="1" />,
+      <SiNodedotjs key="2" />,
+      <SiMongodb key="3" />,
+      <SiExpress key="4" />,
+    ],
     techNames: ["React", "Node.js", "MongoDB", "Express"],
     liveUrl: "https://liganddevelopers.vercel.app/",
     githubUrl: "https://github.com/pavan-patil-22/ligand-workspace",
@@ -197,7 +211,10 @@ const Project = () => {
                   <p className="project-description">{project.description}</p>
 
                   {/* Action Buttons */}
-                  <div className="project-actions" style={{ display: "flex", gap: "0.8rem", flexWrap: "wrap" }}>
+                  <div
+                    className="project-actions"
+                    style={{ display: "flex", gap: "0.8rem", flexWrap: "wrap" }}
+                  >
                     <Link
                       to={`/projects/${project.id}`}
                       className="project-details-btn"
@@ -210,7 +227,10 @@ const Project = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="project-details-btn"
-                        style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)" }}
+                        style={{
+                          background: "rgba(255,255,255,0.1)",
+                          border: "1px solid rgba(255,255,255,0.2)",
+                        }}
                       >
                         Live Link <FaExternalLinkAlt />
                       </a>
